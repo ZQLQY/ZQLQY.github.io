@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://zqlqy.github.io/tags/diffusion/</loc>
+    <loc>http://localhost:1313/tags/diffusion/</loc>
     <lastmod>2024-05-01T11:04:16+08:00</lastmod>
   </url><url>
-    <loc>https://zqlqy.github.io/posts/diffusion%E7%AE%80%E4%BB%8B/</loc>
+    <loc>http://localhost:1313/posts/diffusion%E7%AE%80%E4%BB%8B/</loc>
     <lastmod>2024-05-01T11:04:16+08:00</lastmod>
   </url><url>
-    <loc>https://zqlqy.github.io/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-05-01T11:04:16+08:00</lastmod>
   </url><url>
-    <loc>https://zqlqy.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-05-01T11:04:16+08:00</lastmod>
   </url><url>
-    <loc>https://zqlqy.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-05-01T11:04:16+08:00</lastmod>
   </url><url>
-    <loc>https://zqlqy.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://localhost:1313/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2024-05-01T11:04:16+08:00</lastmod>
   </url><url>
-    <loc>https://zqlqy.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</loc>
+    <loc>http://localhost:1313/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</loc>
     <lastmod>2024-04-30T21:47:13+08:00</lastmod>
   </url><url>
-    <loc>https://zqlqy.github.io/posts/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C/</loc>
+    <loc>http://localhost:1313/posts/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C/</loc>
     <lastmod>2024-04-30T21:47:13+08:00</lastmod>
   </url><url>
-    <loc>https://zqlqy.github.io/archives/</loc>
+    <loc>http://localhost:1313/archives/</loc>
   </url><url>
-    <loc>https://zqlqy.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://zqlqy.github.io/search/</loc>
+    <loc>http://localhost:1313/search/</loc>
   </url>
 </urlset>
