@@ -19,7 +19,7 @@ Diffusion来自于非平衡热力学的启发。他们定义了在扩散过程�
 diffusion probabilistic models (Sohl-Dickstein et al., 2015)
 noise-conditioned score network ( NCSN ; Yang &amp;amp; Ermon, 2019)
 and denoising diffusion probabilistic models ( DDPM ; Ho et al. 2020)
-前向扩散过程 对于给定从真实分布中采样的 $𝑥_0∼𝑞(𝑥)$</description>
+前向扩散过程 对于给定从真实分布中采样$x_0$</description>
     </item>
   </channel>
 </rss>
