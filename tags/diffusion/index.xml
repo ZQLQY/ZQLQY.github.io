@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Diffusion on ZQLog</title>
-    <link>http://localhost:1313/tags/diffusion/</link>
+    <link>https://zqlqy.github.io/tags/diffusion/</link>
     <description>Recent content in Diffusion on ZQLog</description>
     <generator>Hugo -- 0.123.7</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 01 May 2024 11:04:16 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/diffusion/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://zqlqy.github.io/tags/diffusion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diffusion简介</title>
-      <link>http://localhost:1313/posts/diffusion%E7%AE%80%E4%BB%8B/</link>
+      <link>https://zqlqy.github.io/posts/diffusion%E7%AE%80%E4%BB%8B/</link>
       <pubDate>Wed, 01 May 2024 11:04:16 +0800</pubDate>
-      <guid>http://localhost:1313/posts/diffusion%E7%AE%80%E4%BB%8B/</guid>
+      <guid>https://zqlqy.github.io/posts/diffusion%E7%AE%80%E4%BB%8B/</guid>
       <description>到现在为止，共有三种重要的生成模型，GAN,VAE和Flow-based模型。他们在生成高质量样本的任务中表现很好，但也有各自的缺陷。GAN因为其对抗训练的本质，在训练中潜在的不确定性，在生成样本时缺乏多样化；VAE依赖替代损失(surrogate loss)；Flow-based模型必须使用特定的结构来构建可逆的变换。
 Diffusion来自于非平衡热力学的启发。他们定义了在扩散过程中缓慢地向数据中加入随机噪声的马尔科夫链，之后尝试去学习逆向扩散过程，来从噪声中塑造我们想要的样本。与VAE或者flow-based模型不同，扩散模型具有固定的步骤，并且其中的潜变量可以拥有高维度(与原始数据维度相同)。
 什么是扩散模型？ 一些基于扩散思想的模型paper如下：

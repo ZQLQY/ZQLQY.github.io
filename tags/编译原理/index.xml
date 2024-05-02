@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>编译原理 on ZQLog</title>
-    <link>http://localhost:1313/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</link>
+    <link>https://zqlqy.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</link>
     <description>Recent content in 编译原理 on ZQLog</description>
     <generator>Hugo -- 0.123.7</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 30 Apr 2024 21:47:13 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://zqlqy.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>编译原理实验</title>
-      <link>http://localhost:1313/posts/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C/</link>
+      <link>https://zqlqy.github.io/posts/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C/</link>
       <pubDate>Tue, 30 Apr 2024 21:47:13 +0800</pubDate>
-      <guid>http://localhost:1313/posts/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C/</guid>
+      <guid>https://zqlqy.github.io/posts/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C/</guid>
       <description>#include &amp;lt;cstring&amp;gt; #include &amp;lt;valarray&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;string&amp;gt; using namespace std; //宏定义声明 //实现词法分析所需 //宏定义各种符号类型 #define DIGIT 1 #define POINT 2 #define OTHER 3 #define POWER 4 #define PLUS 5 #define MINUS 6 # define ID 7 # define INT 8 # define REAL 9 # define LT 10 # define LE 11 # define EQ 12 # define NE 13 # define GT 14 # define GE 15 # define IS 16 # define PL 17 # define MI 18 # define MU 19 # define DI 20 # define AND 21 # define OR 22 # define NOT 23 # define STR 24 # define CHAR 25 # define OCT 26 # define HEX 27 # define LB 28 # define RB 29 # define NS 30 # define UCON 97 # define ClassOther 200 # define EndState -1 #define MAX_KEY_NUMBER 20 /*关键字的数量*/ #define KEY_WORD_END &amp;#34;#&amp;#34; /*关键字结束标记*/ //输出设置（为区分实验结果） int mode = 0; // 变量定义 // 实现词法分析所需 const int N=10000;// 够用 char *KeyWordTable[MAX_KEY_NUMBER]={&amp;#34;begin&amp;#34;,&amp;#34;end&amp;#34;, &amp;#34;const&amp;#34;,&amp;#34;var&amp;#34;,&amp;#34;if&amp;#34;, &amp;#34;else&amp;#34;,KEY_WORD_END};//关键词表 //实数分析 int w,n,p,e,d;//实数分析所需 int Class;//实数分析类别 int ICON;//实数分析 float FCON;//实数分析的值 static int CurrentState;//实数分析当前状态 //扫描用 int adx=1,ady=1;//当前读入的位置 char ch; //当前读入的字符，必须要设定这个全局变量，在回退之前检查一下是否为EOF,在scanner中为EOF不回退 char TOKEN[20];//每个读入单词 //实现语法分析所需 int sta[10010];//状态栈 int syb[10010];//符号栈 int mea[1010];//语义栈 int stat=0,sybt=0; int meat=0;//以上三栈的栈顶 int topsta;//状态栈顶,在action表中用 int inpsym;//输入符号串顶，在action表中用 //语法本身 char* action[200][200];//action表 int Goto[200][200];//goto表 string R1[100][2]= {{&amp;#34;S&amp;#34;,&amp;#34;E&amp;#34;},{&amp;#34;E&amp;#34;,&amp;#34;E+T&amp;#34;},{&amp;#34;E&amp;#34;,&amp;#34;E-T&amp;#34;},{&amp;#34;E&amp;#34;,&amp;#34;T&amp;#34;},{&amp;#34;T&amp;#34;,&amp;#34;T*F&amp;#34;}, {&amp;#34;T&amp;#34;,&amp;#34;T*F&amp;#34;},{&amp;#34;T&amp;#34;,&amp;#34;F&amp;#34;},{&amp;#34;F&amp;#34;,&amp;#34;(E)&amp;#34;},{&amp;#34;F&amp;#34;,&amp;#34;i&amp;#34;}};//语法 char follow[300][50]; //实现语义分析所需 int idx=0;//每个键值对的索引（key,value） string valu[N];//每个单词的值 int cla[N];//每个单词的类型 int chra[N];//每个单词在语法中扮演的角色 int T[N]={}; int tt=1;//临时变量编号 //函数定义 //报错函数 void report_error(int errcla){ int k=0; char* str; switch (errcla){ case 1: str = &amp;#34;十六进制数表示错误&amp;#34;; break; case 2: str = &amp;#34;八进制数表示错误&amp;#34;; break; case 3: str = &amp;#34;字符型常量定义错误&amp;#34;; break; case 4: str = &amp;#34;非法运算符&amp;#34;; break; case 5: str = &amp;#34;未定义符号&amp;#34;; break; case 6: str=&amp;#34;语法错误&amp;#34;; k=1; break; case 7: str = &amp;#34;未找到表达式&amp;#34;; k=2; break; case 8: str = &amp;#34;不是算符优先文法&amp;#34;; k=2; break; case 11: str=&amp;#34;缺少运算分量&amp;#34;; k=2; break; case 12: str=&amp;#34;不匹配的右括号&amp;#34;; k=2; break; case 13: str=&amp;#34;缺少运算符&amp;#34;; k=2; break; case 14: str=&amp;#34;缺少右括号&amp;#34;; k=2; break; } if(!</description>
     </item>
   </channel>
