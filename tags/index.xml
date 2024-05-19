@@ -4,15 +4,15 @@
     <title>Tags on ZQLog</title>
     <link>https://zqlqy.github.io/tags/</link>
     <description>Recent content in Tags on ZQLog</description>
-    <generator>Hugo -- 0.123.7</generator>
+    <generator>Hugo -- 0.125.6</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 01 May 2024 11:04:16 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 May 2024 11:30:13 +0800</lastBuildDate>
     <atom:link href="https://zqlqy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Diffusion</title>
-      <link>https://zqlqy.github.io/tags/diffusion/</link>
+      <title>Transformer</title>
+      <link>https://zqlqy.github.io/tags/transformer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://zqlqy.github.io/tags/diffusion/</guid>
+      <guid>https://zqlqy.github.io/tags/transformer/</guid>
       <description></description>
     </item>
     <item>
@@ -20,6 +20,20 @@
       <link>https://zqlqy.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://zqlqy.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>目标检测</title>
+      <link>https://zqlqy.github.io/tags/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zqlqy.github.io/tags/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Diffusion</title>
+      <link>https://zqlqy.github.io/tags/diffusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zqlqy.github.io/tags/diffusion/</guid>
       <description></description>
     </item>
     <item>
